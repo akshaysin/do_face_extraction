@@ -314,7 +314,9 @@ As can be seen, with a few lines of code, we were able to setup an automated app
 ####  Further Reading
 
 [OpenCV Standard Documentation](https://docs.opencv.org/3.0-beta/doc/tutorials/tutorials.html)
+
 [learnopencv.com](https://learnopencv.com)
+
 [Digital Image Processing](https://www.amazon.com/Digital-Image-Processing-Rafael-Gonzalez/dp/0133356728/ref=dp_ob_title_bk)
 
 
