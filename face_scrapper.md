@@ -165,7 +165,7 @@ Finally, we simply plot _list of rectangles_ that we got earlier from `detectMul
 
 #### Running the script
 
-Find a image with a group of folks to test your script on and save it in the same directory as your app.py. I chose to go with an popular image of beatles. Given below is the sample output :
+Find a image which you want to test your script on and save it in the same directory as your app.py. I choose an popular image of Beatles for this tutorial.
 
 Next invoke the script as follow:
 
@@ -193,15 +193,15 @@ One curious thing that can be noticed is see how the background of the image cha
 
 ## Step 2 — Extracting the faces found in previous steps and saving them locally as separate face shots.
 
-In the last step we saw how using openCV and haar cascade for face detection we were able to detect faces and draw an bounding box around them in a input image. In this section we are going to build on top of the script created in the last section and add the code to extract those faces from the input image.
+In the last step we saw how using openCV and haar cascade for face, we were able to detect faces and draw an bounding box around them in a input image. In this section we are going to build on top of the script created in the last section and add the code to extract those faces from the input image.
 
-Before moving forward, lets investigate this _list of rectangles_ that got returned from  `detectMultiScale` method in last step. This list actually is a list of `pixel locations`, in the form of `Rect(x,y,w,h)`, for all the objects that were detected in the input image based on the cascade provided. We used those `pixel locations` to create a bounding box around all the detected faces in the image.
+Before moving forward, lets investigate this _list of rectangles_ that got returned from  `detectMultiScale` method in last step. This list actually is a list of `pixel locations`, in the form of `Rect(x,y,w,h)`, for all the objects that were detected in the input image based on the cascade provided. We then used those `pixel locations` to create a bounding box around all the detected faces in the image.
 
 In this step we are simply going to build on the same logic and save each of the bounding box found in last step as a separate image. That's it. Lets see how to do it.
 
 #### Code 
 
-Given here is the updated script. Please open the `app.py` we created earlier in your favorite IDE and replace it with contents below.
+Given here is the updated script. Please open the `app.py` we created earlier in your favorite IDE and replace its contents with code below.
 
 ```python
 [label app.py]
