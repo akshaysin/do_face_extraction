@@ -45,36 +45,49 @@ Before we get started, we will need to create a workspace to hold all the code a
 
 Create the directory by executing a `mkdir` in your workspace 
 
-    mkdir face_scrapper
+```command
+mkdir face_scrapper
+```
 
 Next, Let's change into the newly created directory.
-
-    cd face_scrapper
-
+```command
+cd face_scrapper
+```
 Activate the virtual env for this tutorial
 
-    virtualenv face_scrapper
-    source face_scrapper/Scripts/activate
+```command
+virtualenv face_scrapper
+source face_scrapper/Scripts/activate
+```
 
 Next we will create a requirements.txt file and install the dependencies needed by the project.
 
 Create a `requirements.txt` file in your present directory using `touch`
 
-    touch requirements.txt
-    
+```command
+touch requirements.txt
+```
+
 Add following lines to newly created `requirements.txt` by opening it in yur favorite text editor.
 
-    npmpy
-    opencv-utils
-    opencv-python
+```requirements.txt
+[ label requirements.txt]
+npmpy
+opencv-utils
+opencv-python
+```
 
 Now, we shall install dependencies using python package manager, `pip`
 
-    pip install -r requirements.txt
+```command
+pip install -r requirements.txt
+```
 
 Finally, download the [HAAR Cascade file](https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml) for face detection from OpenCV github repository in your present directory. We shall use this file shortly in our code.
 
-    wget https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml
+```command
+wget https://github.com/opencv/opencv/blob/master/data/haarcascades/haarcascade_frontalface_default.xml
+```
 
 #### Code
 
@@ -87,8 +100,10 @@ In this section we shall look at the actual code that would take an input image 
 
 We shall start by first importing libraries required by our program. Assumption behind this step is that the `pip install` we did in one of the previous step, ran without any issues 
 
-    import cv2
-    import sys
+```command
+import cv2
+import sys
+```
 
 Next we shall read the input image and convert it to a grayscale. We do this using openCV's inbuilt read and convert functions.
 The `cv2.imread` function takes the input image(passed as an argument to the script) and converts it to an openCV object. Next we use openCV's `cvtColor` function to convert the input color image object to an gray scale object. 
@@ -194,7 +209,8 @@ Next invoke the script as follow:
 
 Given here is an sample execution and output. If all looks good, you should be seeing a output similar to below at the time of the execution.
 
-```
+```command
+[label Condole Output]
 $ python app.py beatles-spotlight-514890404.png
 [INFO] Found 4 Faces !
 [INFO] Image faces_detected.jpg written to file-system :  True
@@ -234,12 +250,15 @@ for (x, y, w, h) in faces:
 
 That's it. As can be seen we only added two additional lines to achieve this. Let's go through them one by one. 
 
-    roi_color = image[y:y + h, x:x + w]
+```python
+roi_color = image[y:y + h, x:x + w]
+```
 
 `roi_color` is the plot of `pixel locations` from list `faces` on the input color `image` for the first object.
 
-    cv2.imwrite(str(w) + str(h) + '_faces.jpg', roi_color)
-    
+```python
+cv2.imwrite(str(w) + str(h) + '_faces.jpg', roi_color)
+```
 Next we simply save the plot as a new image using `cv2.imwrite` method. We append the width and height of the plot to the name of the image being written, just to keep the name unique.
 
 #### Putting it all togather
@@ -288,13 +307,14 @@ The idea behind the code added is quite simple. We already had the pixel locatio
 
 Running the script is same as before. Make sure the image you want to process is in the same folder as the script `app.py`. Next invoke the script as follows :
 
-```
+```command
 python app.py path/to/image
 ```
 
 If all has been good so far, we should expect to see following output at the time of execution.
 
-```
+```command
+[label Console Output]
 $ python app.py beatles-spotlight-514890404.png
 [INFO] Found 4 Faces !
 [INFO] Object found. Saving to local !!
