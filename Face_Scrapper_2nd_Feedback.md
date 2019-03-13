@@ -190,7 +190,10 @@ AS : Done
 -->
 <!-- TODO: Thanks for adding in this explanation. Can you recast this paragraph to remove the Stack Overflow link and provide some more context from that link? Per our style guidelines, authors shouldn't send readers offsite to gather information that could be added to the article. This is because if this StackOverflow post were to be archived, that information will be gone and the reader will have no idea what was talked about. What do you think of something like this?
 
-	A common practice in image processing is to first convert the input image to gray-scale. This is because detecting luminance, as opposed to color, will generally yield better results in object detection. Add the following code to take an input image as an argument and convert it to gray-scale: -->
+	A common practice in image processing is to first convert the input image to gray-scale. This is because detecting luminance, as opposed to color, will generally yield better results in object detection. Add the following code to take an input image as an argument and convert it to gray-scale: 
+	
+AS : Done	
+-->
 
 A common practice in image processing is to first convert the input image to gray-scale. This is because detecting luminance, as opposed to color, will generally yield better results in object detection. Add the following code to take an input image as an argument and convert it to gray-scale
 ```python
