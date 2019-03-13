@@ -346,7 +346,7 @@ $ python app.py beatles-spotlight-514890404.png
 [INFO] Image faces_detected.jpg written to file-system :  True
 ```
 
-![Before and After](before_after.jpg)
+![Before and After](https://imgur.com/Qp2fVbZ)
 <!-- TODO: Per our style guidelines, please host the image on Imgur in the `.png` file format. Once the tutorial is ready for publication, we will upload the image to our server. Additionally, if you include the original image where I mentioned in the above comment, you will want to update this to only show the resulting file. -->
 
 Image on the left is the input image which we downloaded earlier while the image on right is the output image that gets written to disk after the execution of the script. One curious thing that might be noticed between before and after images is that how the white background in the original image changes to actual (where it seems like Beatles are standing in backstage). This happened because most probably the input image had the background padded with white for better contrast and converting it to gray scale and back to color lost that additional padded information in the output image.
@@ -515,13 +515,13 @@ AS : Done
 
 Looking at the contents of the working directory after the execution of the script, you should see head shots of all faces found in the input image.
 
-![Directory Listing ](dir_listing.JPG)
+![Directory Listing ](https://imgur.com/nJDq7Eo)
 <!-- TODO: As a reminder, please host any images in the tutorial on Imgur. 
 AS : Done
 -->
 You will now see head shots extracted from the input image collected in the working directory 
 
-![Head shots](head_shots.JPG)
+![Head shots](https://imgur.com/OiTsKHF)
 
 In this step, we added code to our original object detection script to extract the detected objects from the input image and save them locally. 
 
